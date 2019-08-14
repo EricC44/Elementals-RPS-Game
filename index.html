@@ -12,19 +12,42 @@
   </head>
   <body>
     <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-md-4">
+        <div class="row text-center mt-5">
+            <div class="col-md-4" id="rock">
                 <button type="button" class="btn btn-danger btn-large">Rock</button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="paper">
                 <button type="button" class="btn btn-primary btn-large">Paper</button>
             </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-large">Scissors</button>
+            <div class="col-md-4" id="scissors">
+                <button type="button" class="btn btn-success btn-large">Scissors</button>
             </div>
-
+        </div>
+        <div class="row text-center mt-5">
+            <div class="col-md-2"></div>
+            <div class="col">
+                <div id="userResult"></div>
+            </div>
+            <div class="col ml-2">
+                <div id="cpuResult"></div>
+            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    
+    var userscore = 0
+    var cpuscore = 0
+    var cpuPick = ["Rock", "Paper", "Scissors"]
+    
+    
+    document.getElementById("rock").addEventListener("click", function() {
+        console.log('Click')
+        document.getElementById("userResult").innerHTML = "Rock"
+    })
+    
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
