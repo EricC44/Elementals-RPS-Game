@@ -8,10 +8,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>RPS</title>
   </head>
   <body>
     <div class="container-fluid">
+        <div class="row text-center mb-5">
+            <div class="col-md-3 text-center">
+                <h2>User Wins:</h2><span id="userWins"></span>
+            </div>
+            <div class="col-md-3 text-center">
+                <h2>User Games Won:</h2><span id="userScore"></span>
+            </div>
+            <div class="col-md-3 text-center">
+                <h2>CPU Games Won:</h2><span id="cpuScore"></span>
+            </div>
+            <div class="col-md-3 text-center">
+                <h2>CPU Wins:</h2><span id="cpuWins"></span>
+            </div>
+        </div>
         <div class="row text-center mt-5">
             <div class="col-md-4" id="rock">
                 <button type="button" class="btn btn-danger btn-large">Rock</button>
@@ -24,6 +38,8 @@
             </div>
         </div>
         <div class="row text-center mt-5">
+            <div id="results-message"></div>
+            <br><br>
             <div class="col-md-2"></div>
             <div class="col">
                 <div id="userResult"></div>
@@ -36,15 +52,44 @@
     </div>
 
     <script type="text/javascript">
-    
-    var userscore = 0
-    var cpuscore = 0
+    // Global Values for my script tag
+    var userScore = 0
+    var cpuScore = 0
     var cpuPick = ["Rock", "Paper", "Scissors"]
-    
+    var userWins = 0
+    var cpuWins = 0
+    // var cpuChoice = cpuPick(Math.floor(Math.random()*cpuPick.length))
+    // Displays all score related things
+    document.getElementById("userWins").innerHTML = userWins
+    document.getElementById("userScore").innerHTML = userScore
+    document.getElementById("cpuScore").innerHTML = cpuScore
+    document.getElementById("cpuWins").innerHTML = cpuWins
+
     
     document.getElementById("rock").addEventListener("click", function() {
-        console.log('Click')
+        
         document.getElementById("userResult").innerHTML = "Rock"
+        var cpuChoice = cpuPick[Math.floor(Math.random()*cpuPick.length)]
+        document.getElementById("userWins").innerHTML = userWins
+        document.getElementById("userScore").innerText = userScore
+        document.getElementById("cpuScore").innerHTML = cpuScore
+        document.getElementById("cpuWins").innerHTML = cpuWins
+        
+        document.getElementById("cpuResult").innerHTML = cpuChoice
+        
+        if (cpuChoice === "Scissors") {
+            document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Win!`
+            userScore++
+        }
+        if (cpuChoice === "Rock") {
+            document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, draw!` 
+        } 
+        if (cpuChoice === "Paper") {
+            document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Lose!`
+            cpuScore++
+
+        }
+        console.log(cpuChoice, userScore, cpuScore)
     })
     
     </script>
