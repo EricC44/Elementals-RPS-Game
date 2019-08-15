@@ -13,8 +13,9 @@
   <body>
     <div class="container-fluid" id="toggle-results">
         <div class="row">
-            <div class="col">
+            <div class="col text-center mt-5 pt-5">
                 <div id="final"></div>
+                <button type="button" class="btn btn-primary btn-large text-center" id="play-again">Play Again?</button>
             </div>
         </div>
     </div>
@@ -89,6 +90,7 @@
         if (cpuChoice === "Scissors") {
             document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Win!`
             userScore++
+            check()
         }
         if (cpuChoice === "Rock") {
             document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, draw!` 
@@ -96,6 +98,7 @@
         if (cpuChoice === "Paper") {
             document.getElementById("results-message").innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Lose!`
             cpuScore++
+            check()
 
         }
         
@@ -117,10 +120,12 @@
         if (cpuChoice === "Scissors") {
             document.getElementById("results-message").innerText = `You chose "Paper", the computer chose ${cpuChoice}, you Lose!`
             cpuScore++
+            check()
         }
         if (cpuChoice === "Rock") {
             document.getElementById("results-message").innerText = `You chose "Paper", the computer chose ${cpuChoice}, you Win!`
-            userScore++ 
+            userScore++
+            check() 
         } 
         if (cpuChoice === "Paper") {
             document.getElementById("results-message").innerText = `You chose "Paper", the computer chose ${cpuChoice}, Draw!`
@@ -142,19 +147,63 @@
         // These if statements will add a point depending on the out come of the computers result
         if (cpuChoice === "Scissors") {
             document.getElementById("results-message").innerText = `You chose "Scissors", the computer chose ${cpuChoice}, Draw!`
+            check()
         }
         if (cpuChoice === "Rock") {
             document.getElementById("results-message").innerText = `You chose "Scissors", the computer chose ${cpuChoice}, you Lose!`
-            cpuScore++ 
+            cpuScore++
+            check() 
         } 
         if (cpuChoice === "Paper") {
             document.getElementById("results-message").innerText = `You chose "Scissors", the computer chose ${cpuChoice}, you Win!`
             userScore++
+            check()
         }
     })
+    function check() {
+        
+        if (userScore >= 5) {
+            // Hides Game info
+            document.getElementById("toggle-game").style.display = "none"
+            // Reveals results info
+            document.getElementById("toggle-results").style.display = "block"
 
-    if (userScore >= 5) {
+            document.getElementById("final").innerText = `Congratulations! You have declared victory on your enemy!`
+            document.getElementById("userWins").innerText = userWins
+            userWins++
+            document.getElementById("play-again").addEventListener("click", function() {
+                reset()
+            })
+        }
+        
+        if (cpuScore >= 5) {
+            // Hides Game info
+            document.getElementById("toggle-game").style.display = "none"
+            // Reveals results info
+            document.getElementById("toggle-results").style.display = "block"
 
+            document.getElementById("final").innerText = `You have been defeated by your enemy...`
+
+            document.getElementById("cpuWins").innerText = cpuWins
+            cpuWins++
+            document.getElementById("play-again").addEventListener("click", function() {
+                reset()
+            }) 
+        }
+    }
+
+    function reset() {
+        document.getElementById("results-message").innerText = ""
+        document.getElementById("userResult").innerText = ""
+        document.getElementById("cpuResult").innerText = ""
+        userScore = 0
+        cpuScore = 0
+
+        document.getElementById("toggle-game").style.display = "block"
+        document.getElementById("toggle-results").style.display = "none"
+        
+        
+        
     }
     
     
