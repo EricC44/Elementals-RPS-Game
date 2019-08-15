@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://cdn.spacetelescope.org/archives/images/thumb700x/heic1509a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+#userStyleWin {
+    color: #000000;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff; 
+}
+#userStyleScore {
+    color: #000000;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff 
+}
+#cpuStyleWin {
+    color: #000000;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff 
+}
+#cpuStyleScore {
+    color: #000000;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff 
+}
+#userWins {
+    font-size: 26px;
+}
+#userScore {
+    font-size: 26px;
+}
+#cpuWins {
+    font-size: 26px;
+}
+#cpuScore {
+    font-size: 26px;
+}
