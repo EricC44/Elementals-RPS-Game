@@ -31,3 +31,19 @@ body {
 #cpuScore {
     font-size: 26px;
 }
+#userResult {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    font-size: 50px; 
+}
+#cpuResult {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    font-size: 50px;
+}
+#results-message {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    font-size: 40px;
+}
+#final {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    font-size: 40px; 
+}
