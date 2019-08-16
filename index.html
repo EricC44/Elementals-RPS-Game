@@ -8,9 +8,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>RPS</title>
+    <title>Elementals</title>
   </head>
   <body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class="display-2 mb-2 text-center" id="title-game">Elementals</h1>
+        <h3 class="display-4 mt-1 text-center" id="how-to">How to Play</h3>
+        <p class="text-center" id="main-jumbo-txt">Playing Elementals is just like the classic game Rock, Paper, Scissors!  To start, click on one of the elements to begin!
+            When you click one one of the buttons, your choice will display on the bottom of the screen.  After that the computer will pick an element and 
+            then the elements battle it out to see who wins. If you win, you get a point.  If the computer wins, they get one point.  If both pick 
+            the same element then no one gets a point.  First person to 5 wins the game and is awarded with a victory point in the top left and right sides 
+            of the window. 
+        </p>
+        <br>
+        <p class="text-center" id="win-condition">To win see how elements beat one another:</p>
+        
+        <p class="text-center"><span class="fire-great">Fire</span> > <span class="grass-great">Grass</span></p>
+        <p class="text-center"><span class="water-great">Water</span> > <span class="fire-great">Fire</span></p>
+        <p class="text-center"><span class="grass-great">Grass</span> > <span class="water-great">Water</span></p>
+             
+        
+        <p class="text-center" id="oopsie">Note: There is a bug with the win counters where the first win will still put up a 0.  This will be 
+            addressed at a later date.
+        </p>
+
+        
+    </div>
     <div class="container-fluid" id="toggle-results">
         <div class="row">
             <div class="col text-center mt-5 pt-5">
@@ -18,13 +41,6 @@
                 <button type="button" class="btn btn-primary btn-large text-center" id="play-again">Play Again?</button>
             </div>
         </div>
-    </div>
-    <div class="jumbotron" id="jumbo">
-        <h1 class="display-4 mb-2 text-center">Hello Player</h1>
-        <h3 class="display-2 mt-1 text-center">How to Play</h3>
-        <p class="text-center"></p>
-
-        
     </div>
     <div class="container-fluid" id="toggle-game">
         <div class="row text-center mb-5">
