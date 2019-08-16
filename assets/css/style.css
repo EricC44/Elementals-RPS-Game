@@ -47,3 +47,44 @@ body {
     text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
     font-size: 40px; 
 }
+#title-game {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    color: blueviolet; 
+}
+.fire-great {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    font-size: 26px;
+    color: #FC3319;
+}
+.water-great {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    font-size: 26px;
+    color: #252EF4;
+}
+.grass-great {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    font-size: 26px;
+    color: #188336;
+}
+#how-to {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    color: blueviolet; 
+}
+#main-jumbo-txt {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    color: violet;
+    font-size: 26px 
+}
+#oopsie {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    color: #FC3319;
+    font-size: 18px; 
+}
+#win-condition {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 2px 0 #ffffff, 0 -2px #ffffff;
+    color: blueviolet;
+    font-size: 30px;
+}
+#jumbo {
+    background-image: url('https://images.wallpaperscraft.com/image/stars_milky_way_space_116893_1280x720.jpg');
+}
