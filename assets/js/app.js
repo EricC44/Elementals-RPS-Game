@@ -1,7 +1,7 @@
 // Global Values for my script tag
 var userScore = 0
 var cpuScore = 0
-var cpuPick = ['Rock', 'Paper', 'Scissors']
+var cpuPick = ['Fire', 'Water', 'Grass']
 var userWins = 0
 var cpuWins = 0
 // Hides final results information
@@ -12,9 +12,10 @@ document.getElementById('userScore').innerHTML = userScore
 document.getElementById('cpuScore').innerHTML = cpuScore
 document.getElementById('cpuWins').innerHTML = cpuWins
 
-document.getElementById('rock').addEventListener('click', function () {
+document.getElementById('fire').addEventListener('click', function () {
   // This displays our clicked value
-  document.getElementById('userResult').innerHTML = 'Rock'
+  document.getElementById('userResult').innerHTML = 'Fire'
+  document.getElementById('userResult').style.color = '#FC3319'
   // This randomly grabs one of the array values
   var cpuChoice = cpuPick[Math.floor(Math.random() * cpuPick.length)]
   // This grabs our value from our HTML to increment the players score
@@ -25,24 +26,25 @@ document.getElementById('rock').addEventListener('click', function () {
   // This displays our random value from our cpuPick array
   document.getElementById('cpuResult').innerHTML = cpuChoice
   // These if statements will add a point depending on the out come of the computers result
-  if (cpuChoice === 'Scissors') {
-    document.getElementById('results-message').innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Win!`
+  if (cpuChoice === 'Grass') {
+    document.getElementById('results-message').innerText = `You chose Fire, the computer chose ${cpuChoice}, you Win!`
     userScore++
     check()
   }
-  if (cpuChoice === 'Rock') {
-    document.getElementById('results-message').innerText = `You chose "Rock", the computer chose ${cpuChoice}, draw!`
+  if (cpuChoice === 'Fire') {
+    document.getElementById('results-message').innerText = `You chose Fire, the computer chose ${cpuChoice}, draw!`
   }
-  if (cpuChoice === 'Paper') {
-    document.getElementById('results-message').innerText = `You chose "Rock", the computer chose ${cpuChoice}, you Lose!`
+  if (cpuChoice === 'Water') {
+    document.getElementById('results-message').innerText = `You chose Fire, the computer chose ${cpuChoice}, you Lose!`
     cpuScore++
     check()
   }
 })
 
-document.getElementById('paper').addEventListener('click', function () {
+document.getElementById('water').addEventListener('click', function () {
   // This displays our clicked value
-  document.getElementById('userResult').innerHTML = 'Paper'
+  document.getElementById('userResult').innerHTML = 'Water'
+  document.getElementById('userResult').style.color = '#252EF4'
   // This randomly grabs one of the array values
   var cpuChoice = cpuPick[Math.floor(Math.random() * cpuPick.length)]
   // This grabs our value from our HTML to increment the players score
@@ -53,24 +55,25 @@ document.getElementById('paper').addEventListener('click', function () {
   // This displays our random value from our cpuPick array
   document.getElementById('cpuResult').innerHTML = cpuChoice
   // These if statements will add a point depending on the out come of the computers result
-  if (cpuChoice === 'Scissors') {
-    document.getElementById('results-message').innerText = `You chose "Paper", the computer chose ${cpuChoice}, you Lose!`
+  if (cpuChoice === 'Grass') {
+    document.getElementById('results-message').innerText = `You chose Water, the computer chose ${cpuChoice}, you Lose!`
     cpuScore++
     check()
   }
-  if (cpuChoice === 'Rock') {
-    document.getElementById('results-message').innerText = `You chose "Paper", the computer chose ${cpuChoice}, you Win!`
+  if (cpuChoice === 'Fire') {
+    document.getElementById('results-message').innerText = `You chose Water, the computer chose ${cpuChoice}, you Win!`
     userScore++
     check()
   }
-  if (cpuChoice === 'Paper') {
-    document.getElementById('results-message').innerText = `You chose "Paper", the computer chose ${cpuChoice}, Draw!`
+  if (cpuChoice === 'Water') {
+    document.getElementById('results-message').innerText = `You chose Water, the computer chose ${cpuChoice}, Draw!`
   }
 })
 
-document.getElementById('scissors').addEventListener('click', function () {
+document.getElementById('grass').addEventListener('click', function () {
   // This displays our clicked value
-  document.getElementById('userResult').innerHTML = 'Scissors'
+  document.getElementById('userResult').innerHTML = 'Grass'
+  document.getElementById('userResult').style.color = '#188336'
   // This randomly grabs one of the array values
   var cpuChoice = cpuPick[Math.floor(Math.random() * cpuPick.length)]
   // This grabs our value from our HTML to increment the players score
@@ -81,17 +84,17 @@ document.getElementById('scissors').addEventListener('click', function () {
   // This displays our random value from our cpuPick array
   document.getElementById('cpuResult').innerHTML = cpuChoice
   // These if statements will add a point depending on the out come of the computers result
-  if (cpuChoice === 'Scissors') {
-    document.getElementById('results-message').innerText = `You chose "Scissors", the computer chose ${cpuChoice}, Draw!`
+  if (cpuChoice === 'Grass') {
+    document.getElementById('results-message').innerText = `You chose Grass, the computer chose ${cpuChoice}, Draw!`
     check()
   }
-  if (cpuChoice === 'Rock') {
-    document.getElementById('results-message').innerText = `You chose "Scissors", the computer chose ${cpuChoice}, you Lose!`
+  if (cpuChoice === 'Fire') {
+    document.getElementById('results-message').innerText = `You chose Grass, the computer chose ${cpuChoice}, you Lose!`
     cpuScore++
     check()
   }
-  if (cpuChoice === 'Paper') {
-    document.getElementById('results-message').innerText = `You chose "Scissors", the computer chose ${cpuChoice}, you Win!`
+  if (cpuChoice === 'Water') {
+    document.getElementById('results-message').innerText = `You chose Grass, the computer chose ${cpuChoice}, you Win!`
     userScore++
     check()
   }
